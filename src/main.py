@@ -5,7 +5,6 @@ import schedule
 import time
 import yaml
 import os
-import shutil
 
 CONFIG_FILE_PATH = '/usr/src/config/config.yml'
 SAMPLE_CONFIG_FILE_PATH = '/usr/src/exampleConfig/config.yml'
@@ -26,8 +25,7 @@ class Main:
     def loadConfigFile (self):
         #check if config file exists
         if not os.path.exists(CONFIG_FILE_PATH):
-            shutil.copy(SAMPLE_CONFIG_FILE_PATH, CONFIG_FILE_PATH)
-            os.chmod(CONFIG_FILE_PATH, 755)
+            exit("config file not found")
 
         #load yml config
         file = open(CONFIG_FILE_PATH)
