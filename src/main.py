@@ -27,6 +27,7 @@ class Main:
         #check if config file exists
         if not os.path.exists(CONFIG_FILE_PATH):
             shutil.copy(SAMPLE_CONFIG_FILE_PATH, CONFIG_FILE_PATH)
+            os.chmod(CONFIG_FILE_PATH, 755)
 
         #load yml config
         file = open(CONFIG_FILE_PATH)
