@@ -1,0 +1,4 @@
+docker
+discord-webhook
+pyyaml
+schedule

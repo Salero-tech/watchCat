@@ -1,0 +1,13 @@
+version: '3'
+services:
+  watchCat:
+    image: salero33/watchcat:latest
+    container_name: watchCat
+    restart: unless-stopped
+    volumes:
+      - ./config:/usr/src/config/
+    environment:
+      - TZ=Europe/Zurich
+    labels:
+      - "watchCat=True"
+      - "watchCat.group=default"
