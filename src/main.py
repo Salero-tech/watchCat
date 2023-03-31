@@ -21,6 +21,8 @@ class Main:
             schedule.run_pending()
             #sleep until next job
             time.sleep(schedule.idle_seconds())
+            #reload config
+            self.loadConfigFile()
 
     def loadConfigFile (self):
         #check if config file exists
