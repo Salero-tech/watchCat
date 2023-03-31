@@ -6,6 +6,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./config:/usr/src/config/
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
       - TZ=Europe/Zurich
     labels:
