@@ -4,6 +4,3 @@ interval:
 
 notification:
     default:
-        discord:
-            url: "https:// ...." #discord webhook
-            onUpdate: "<@UserID>"
