@@ -57,3 +57,7 @@ Tired of checking if your docker containers are up to date manually? Watch cat c
     ```bash
     docker-compose up -d
     ```
+
+# Contribution 
+
+If you want to contribute or need help feel free to open a issue/pull request.
