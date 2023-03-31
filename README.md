@@ -13,7 +13,7 @@ Tired of checking if your docker containers are up to date manually? Watch cat c
 | Message Service  | Status |
 |------------------|--------|
 | discord          | ✅     |
-| email            | In work|
+| email            | ✅     |
 
 ## quick start
 
@@ -39,7 +39,7 @@ Tired of checking if your docker containers are up to date manually? Watch cat c
  4. To setup your notification:
     - [organzie notifications in groups](docs/group.md)
     - [discord](docs/discord.md)
-    - [mail]()
+    - [mail](docs/mail.md)
 
  5. Add container to be monitored (if no group is specified the container is added to group "default"; [more details](docs/group.md)): <br>
     docker-compose:
