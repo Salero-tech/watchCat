@@ -33,6 +33,7 @@ class Main:
         file.close()
     
     def run (self):
+        print("start scan now")
         #version check of containers
         cat = WatchCat()
         cat.getMonitoredContainers()
@@ -40,8 +41,10 @@ class Main:
 
         #all containers up to date?
         if len(updatbleList) == 0:
+            print("no containers to update")
             return
 
+        print("sending notifications")
         #notify for updates
         notify = Notify(self.configNotify)
         notify.sendNotifications(updatbleList)
