@@ -7,7 +7,6 @@ import yaml
 import os
 
 CONFIG_FILE_PATH = '/usr/src/config/config.yml'
-CONFIG_FILE_PATH = "/home/jan/Dokumente/git/watchCat/src/config/config.yml"
 
 class Main:
     def __init__(self) -> None:
