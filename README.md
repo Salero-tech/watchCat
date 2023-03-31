@@ -1,6 +1,6 @@
 # watch cat
 
-Tired of checking if your docker containers are up to date manually? Watch cat checks all specified containers periodically for updates from the regrestry and notifys you
+Tired of checking if your docker containers are up to date manually? Watch cat checks all specified containers periodically for updates from the regrestry and notifys you.
 
 
 ## futures
