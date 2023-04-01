@@ -1,6 +1,6 @@
 # watch cat
 
-Tired of checking if your docker containers are up to date manually? Watch cat checks all specified containers periodically for updates from the regrestry and notifys you.
+Tired of checking if your docker containers are up to date manually? Watch cat checks all specified containers periodically for updates from the registry and notifys you.
 
 
 ## futures
@@ -22,7 +22,7 @@ Tired of checking if your docker containers are up to date manually? Watch cat c
     wget https://raw.githubusercontent.com/Salero-tech/watchCat/main/docker-compose.yml
     ```
 
- 2. create config folder & download config file
+ 2. create config folder & download config file [example config](examples/config.yml)
     ```bash
     mkdir config && cd config && wget https://raw.githubusercontent.com/Salero-tech/watchCat/main/src/config/config.yml
     ```
@@ -42,7 +42,7 @@ Tired of checking if your docker containers are up to date manually? Watch cat c
     - [mail](docs/mail.md)
 
  5. Add container to be monitored (if no group is specified the container is added to group "default"; [more details](docs/group.md)): <br>
-    docker-compose:
+    docker-compose [examples](examples/docker-compose.yml):
     ```yml
     labels:
         - "watchCat=True"
