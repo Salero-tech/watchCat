@@ -1,8 +1,6 @@
 version: '3'
 
 services:
-
-#test services:
     nginx:
         image: nginx:latest
         container_name: test_nginx

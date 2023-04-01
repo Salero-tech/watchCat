@@ -1,0 +1,22 @@
+interval:
+    every: 1 # every day: 1, every two days: 2, etc
+    time: "02:30" # run at 2:30 in the morning
+
+notification:
+    #notifications organized in groups
+    default:
+      discord:
+        url: "https:// ...." #discord webhook
+        onUpdate: "<@UserID>" #custom message
+      mail:
+        host: "smtp.gmail.com"
+        port: 587
+        user: "noreply@example.net"
+        passwd: "*******"
+        from_mail: "noreply@example.net"
+        to_mail: ["admin@example.net", "admin2@example.net"]
+
+    test:
+      discord:
+          url: "https:// ...." #discord webhook
+          onUpdate: "<@UserID>" #custom message
