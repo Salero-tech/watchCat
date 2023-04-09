@@ -35,7 +35,12 @@ class WatchContainer:
     def isUpdateAvilable (self) -> bool:
         #local img
         img = self.container.image
-        repoIdLocal = img.attrs["RepoDigests"][0].split("@")[1]
+        try:
+            repoIdLocal = img.attrs["RepoDigests"][0].split("@")[1]
+        except:
+            print(f"unable to find repository for: {self.imageName}")
+            self.update = False
+            return self.update
 
         #remote img
         imgReg = self.client.images.get_registry_data(self.imageName)
@@ -44,6 +49,17 @@ class WatchContainer:
         #is update available
         self.update = repoId != repoIdLocal
         return self.update
+
+    def toDict (self):
+        dataDict = {}
+
+        #adding all data to a dict
+        dataDict["name"] = self.name
+        dataDict["idShort"] = self.idShort
+        dataDict["imageName"] = self.imageName
+        dataDict["groups"] = self.groups
+
+        return dataDict
 
     def __str__ (self):
         return f"{self.name}, {self.idShort}, {self.isUpdateAvilable()}"
