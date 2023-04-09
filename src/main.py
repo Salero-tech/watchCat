@@ -3,35 +3,24 @@ from dockerInteract.watchContainer import WatchContainer
 from notify.notify import Notify
 import schedule
 import time
-import yaml
-import os
-
-CONFIG_FILE_PATH = '/usr/src/config/config.yml'
+import fileSystem
 
 class Main:
+    config = {}
     def __init__(self) -> None:
-        self.loadConfigFile()
-
+        fileSystem.init()
+        #loadconfig
+        self.config = fileSystem.loadConfigFile()
         #set up scheduel for running periodically
         schedule.every(self.configInterval["every"]).day.at(self.configInterval["time"]).do(self.run)
     
     def loop (self):
         while True:
+            #reload config
+            self.config = fileSystem.loadConfigFile()
             schedule.run_pending()
             #sleep until next job
             time.sleep(schedule.idle_seconds())
-            #reload config
-            self.loadConfigFile()
-
-    def loadConfigFile (self):
-        #check if config file exists
-        if not os.path.exists(CONFIG_FILE_PATH):
-            exit("config file not found")
-
-        #load yml config
-        file = open(CONFIG_FILE_PATH)
-        self.config = yaml.safe_load(file)
-        file.close()
     
     def run (self):
         print("start scan now")
