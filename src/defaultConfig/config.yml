@@ -1,0 +1,13 @@
+version: 2.0
+
+interval:
+    every: 1 # every day: 1, every two days: 2, etc
+    time: "02:30" # run at 2:30 in the morning
+
+notification:
+    default:
+        discord:
+            url: "url"
+            template: "default.yml"
+
+

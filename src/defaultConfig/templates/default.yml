@@ -1,0 +1,12 @@
+version: 2.0
+
+type: "text"
+titel: "update from WatchCat"
+insert: <%name%>     <%idShort%>     <%imageName%>
+string: |
+  The folowing Containers have updates available:
+
+  name     idShort     imageName
+  <%list%>
+
+  Generated with WatchCat
