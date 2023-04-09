@@ -5,7 +5,7 @@ services:
     container_name: watchCat
     restart: unless-stopped
     volumes:
-      - ./config:/usr/src/config/
+      - ./config:/home/watchcat/config/
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
       - TZ=Europe/Zurich
